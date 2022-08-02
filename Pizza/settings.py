@@ -5,6 +5,7 @@ from decouple import config
 from datetime import timedelta
 import dj_database_url
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -18,7 +19,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG',cast=bool)
 
-ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1' ,'127.0.0.1:8000','kubernetes.docker.internal']
+ALLOWED_HOSTS = ['*','198.211.99.20', 'localhost', '127.0.0.1' ,'127.0.0.1:8000','kubernetes.docker.internal']
 
 
 # Application definition
